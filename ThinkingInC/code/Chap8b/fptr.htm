@@ -1,0 +1,12 @@
+<html><font size="+1"><pre>
+/* fptr.c */
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1;
+    int (*fp)(const char*, ...) = printf;
+    fp("i == %d\n", i);     /* or (*fp)(" i == ...); */
+    return 0;
+}
+
+</pre></font></html>

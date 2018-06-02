@@ -1,0 +1,18 @@
+<html><font size="+1"><pre>
+// tintstack.cpp: Tests StackOfInt
+#include "intstack.h"
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    const int N = 5;
+    StackOfInt stk(N);
+    
+    for (int i = 0; i &lt; N; ++i)
+        stk.push(i);
+    while (stk.size() &gt; 0)
+        cout &lt;&lt; stk.pop() &lt;&lt; ' ';
+    cout &lt;&lt; endl;
+}
+        
+</pre></font></html>

@@ -1,0 +1,16 @@
+<html><font size="+1"><pre>
+/* file2.c */
+#include &lt;stdio.h&gt;
+
+int main() {
+    extern int i;
+    /* extern optional for funtions: */
+    int get_j(void);
+    
+    
+    printf("i == %d\n", ++i);
+    printf("j == %d\n", get_j());
+    return 0;
+}
+
+</pre></font></html>

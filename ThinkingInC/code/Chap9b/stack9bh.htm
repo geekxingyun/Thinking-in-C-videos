@@ -1,0 +1,60 @@
+<html><font size="+1"><pre>
+// stack9b.h: A Stack template
+
+template&lt;class T&gt;
+class Stack {
+public:
+    Stack(int);
+    void push(T);
+    T pop();
+    T top() const;
+    int size() const;
+    ~Stack();
+
+private:
+    T *data;
+    int length;
+    int ptr;
+};
+
+template&lt;class T&gt;
+Stack&lt;T&gt;::Stack(int stk_size) {
+    data = new T[length = stk_size];
+    ptr = 0;
+};
+
+template&lt;class T&gt;
+void Stack&lt;T&gt;::push(T x) {
+    if (ptr &lt; length)
+        data[ptr++] = x;
+    else
+        throw "overflow";
+}
+
+template&lt;class T&gt;
+T Stack&lt;T&gt;::pop() {
+    if (ptr &gt; 0)
+        return data[--ptr];
+    else
+        throw "underflow";
+}
+
+template&lt;class T&gt;
+T Stack&lt;T&gt;::top() const {
+    if (ptr &gt; 0)
+        return data[ptr-1];
+    else
+        throw "underflow";
+}
+
+template&lt;class T&gt;
+int Stack&lt;T&gt;::size() const {
+    return ptr;
+}
+
+template&lt;class T&gt;
+Stack&lt;T&gt;::~Stack() {
+    delete [] data;
+}
+
+</pre></font></html>

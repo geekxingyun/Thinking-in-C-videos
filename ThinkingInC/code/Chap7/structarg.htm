@@ -1,0 +1,22 @@
+<html><font size="+1"><pre>
+/* structarg.c: Passes a struct by address */
+#include &lt;stdio.h&gt;
+
+struct Date {
+    int year;
+    int month;
+    int day;
+};
+
+void printDate(struct Date* p) {
+    printf("%2d/%2d/%02d", p-&gt;month, p-&gt;day,
+                           p-&gt;year);
+}
+
+int main() {
+    struct Date d = {98, 10, 2};
+    printDate(&d);
+    return 0;
+}
+
+</pre></font></html>

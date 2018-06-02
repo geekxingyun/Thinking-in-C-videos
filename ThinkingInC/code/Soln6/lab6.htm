@@ -1,0 +1,22 @@
+<html><font size="+1"><pre>
+/* lab6.c */
+#include "employee.h"
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i;
+    
+    /* Fill Employee array: */
+    while (addEmployee() != -1)
+        ;
+    
+    /* Print each Employee: */    
+    for (i = 0; i &lt; numEmployees(); ++i) {
+        printEmployee(i);
+        putchar('\n');
+    }
+    return 0;
+}
+
+        
+</pre></font></html>

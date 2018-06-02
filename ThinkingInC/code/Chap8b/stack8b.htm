@@ -1,0 +1,63 @@
+<html><font size="+1"><pre>
+/* stack8b.c: implementation */
+#include "stack8b.h"
+#include &lt;stdlib.h&gt;
+
+struct Stack {
+    int *data;
+    int size;
+    int ptr;
+    int error;
+};
+
+Stack* stk_create(int stk_size) {
+    Stack* stkp = malloc(sizeof(Stack));
+    stkp-&gt;size = stk_size;
+    stkp-&gt;data = malloc(stkp-&gt;size*sizeof(int));
+    stkp-&gt;ptr = stkp-&gt;error = 0;
+    return stkp;
+};
+
+void stk_push(Stack* stkp, int x) {
+    if (stkp-&gt;ptr &lt; stkp-&gt;size) {
+        stkp-&gt;data[stkp-&gt;ptr++] = x;
+        stkp-&gt;error = 0;
+    }
+    else
+        stkp-&gt;error = 1;
+}
+
+int stk_pop(Stack* stkp) {
+    if (stkp-&gt;ptr &gt; 0) {
+        int x = stkp-&gt;data[--stkp-&gt;ptr];
+        stkp-&gt;error = 0;
+        return x;
+    } else {
+        stkp-&gt;error = 1;
+        return STK_ERROR;
+    }
+}
+
+int stk_top(Stack* stkp) {
+    if (stkp-&gt;ptr &gt; 0) {
+        stkp-&gt;error = 0;
+        return stkp-&gt;data[stkp-&gt;ptr-1];
+    } else {
+        stkp-&gt;error = 1;
+        return STK_ERROR;
+    }
+}
+
+int stk_size(Stack* stkp) {
+    return stkp-&gt;ptr;
+}
+
+int stk_error(Stack* stkp) {
+    return stkp-&gt;error;
+}
+
+void stk_destroy(Stack* stkp) {
+    free(stkp-&gt;data);
+    free(stkp);
+}
+</pre></font></html>

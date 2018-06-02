@@ -1,0 +1,17 @@
+<html><font size="+1"><pre>
+/* static.c */
+#include &lt;stdio.h&gt;
+
+int count() {
+    static int n = 0;
+    return ++n;
+}
+
+int main() {
+    int i;
+    for (i = 0; i &lt; 5; ++i)
+        printf("%d ", count());
+    return 0;
+}
+
+</pre></font></html>

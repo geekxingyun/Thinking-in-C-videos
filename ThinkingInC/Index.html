@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Thinking in C Table of Contents</title>
+<link rel="shortcut icon" href="images/favicontic.ico">
+
+<style type="text/css" media="all">
+* { font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif; }
+
+body { 
+  background: url(images/Backgnd.gif) #FFCC99 repeat-y; 
+  margin-left: 2.1in; 
+  margin-bottom:1.0in;
+  width: 550px; 
+}
+
+div.headline { margin-top: 1.00in; width: 750px; font-size: 220% }
+
+div.byline { font-size: 150% }
+
+div.headerblock { margin-left: -1.0in; }
+
+div.copyright { width: 750px; }
+
+div.chapter { font-size: 175% }
+
+a { color:green }
+
+a.code { font-size: 85% }
+
+a.lecture { font-size: 125% }
+
+a.book { border: 0; color: #FFCC99; }
+
+hr {
+  border: 0;
+  color: gray;
+  background: gray;
+  height: 5px;
+  margin-top: 30px; 
+  margin-bottom: 10px;
+}
+
+hr.chapterlisttrailer { margin-top: 15px; }
+
+div#chapterlist { font-size: 130%; }
+
+img.bookcover { width: 260px; margin: 4px; border-color: #FFCC99 }
+
+img.hojcover { width: 533px; margin: 4px; border-color: #FFCC99 }
+</style>
+
+</head>
+
+<body>
+
+<div class="headerblock">
+  <div class="headline">Thinking in C: Foundations for Java &amp; C++</div>
+  <div class="byline">by Chuck Allison</div>
+  <div class="copyright" style="color:green; margin-top: 0.1in">
+  A Flash&trade;-based learning experience produced by 
+  Bruce Eckel<br/>&copy;2006, &copy;2013 
+  <a href="http://www.mindviewinc.com">MindView, LLC</a>
+  </div>
+</div>
+
+<div style="width:700px; margin-top: 0.3in; margin-bottom: -0.4in;">
+  <div style="position:left">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/">
+    <img alt="Creative Commons License" border="0" src="images/somerights20.png"/></a>
+  </div>
+  <div style="position:relative; top: -35px; left: 325px;">
+    <a href="A Study in C by Carcassi.mp3" target="_blank">Play "A Study in C," by Carcassi,<br/>performed by Chuck Allison</a>
+  </div>
+</div>
+
+<hr/>
+<div id="chapterlist">
+Chapters: &nbsp;
+<a href="#One">1</a>&nbsp;&nbsp;&nbsp;
+<a href="#Two">2</a>&nbsp;&nbsp;&nbsp;
+<a href="#Three">3</a>&nbsp;&nbsp;&nbsp;
+<a href="#Four">4</a>&nbsp;&nbsp;&nbsp;
+<a href="#Five">5</a>&nbsp;&nbsp;&nbsp;
+<a href="#Six">6</a>&nbsp;&nbsp;&nbsp;
+<a href="#Seven">7</a>&nbsp;&nbsp;&nbsp;
+<a href="#EightA">8a</a>&nbsp;&nbsp;&nbsp;
+<a href="#EightB">8b</a>&nbsp;&nbsp;&nbsp;
+<a href="#NineB">9b</a>
+</div>
+
+<div class="body">
+<hr class="chapterlisttrailer"/>
+
+<p>Hello! I'm Bruce Eckel, and I have worked with 
+<a href="http://www.freshsources.com/">Chuck  Allison</a> to bring you this
+Flash&trade;-based seminar, which  is being published by my company, MindView,
+LLC, as a  way to prepare you for the following Prentice Hall books:</p>
+
+<div style="margin-top: 0.25in;">
+
+<a class="book" href="http://www.amazon.com/Thinking-Java-Edition-Bruce-Eckel/dp/0131872486">
+<img class="bookcover" alt="Link to Amazon" src="images/TIJ4.jpg" /></a>
+<a class="book" href="http://www.amazon.com/gp/product/0135917859">
+<img class="bookcover" alt="Link to Amazon" src="images/CodeCapsules.jpg" /></a><br/>
+<a class="book" href="http://www.amazon.com/Thinking-Introduction-Standard-Volume-Edition/dp/0139798099">
+<img class="bookcover" alt="Link to Amazon" src="images/TICPPV1.jpg" /></a>
+<a class="book" href="http://www.amazon.com/Thinking-Volume-Programming-Bruce-Eckel/dp/0130353132">
+<img class="bookcover" alt="Link to Amazon" src="images/TICPPV2.jpg" /></a>
+
+</div>
+
+<p><i>Thinking in C</i> is also excellent preparation for the <a href="http://www.mindviewinc.com/CDs/HOJ2/index.php">Hands-On Java eSeminar</a>:</p>
+
+<div style="margin-top: 0.25in;">
+
+<a class="book" href="http://www.mindviewinc.com/CDs/HOJ2/index.php">
+<img class="hojcover" alt="Hands-On Java 2nd Ed." src="images/HandsOnJava.png" /></a>
+</div>
+
+<p>Chuck and I believe that this learning experience will 
+provide you with great value on your educational journey.</p>
+
+<p>This seminar will give you a background in the  fundamentals of C,
+to prepare you to move into Java,  C++ or other languages based on C syntax.
+You'll also find it useful if you would just like an  introduction to
+C.</p>
+
+<p>Please note that we are assuming you have already written  at least a few
+small programs in some programming language. You might still get value from
+the seminar if you've never programmed before, but that could require some
+extra effort at the beginning. You'll know by the end of the first lecture
+and exercises.</p>
+
+<p>All the lectures in the seminar are self-explanatory, and 
+the first one describes what to expect throughout the 
+course.</p>
+
+<p>This seminar is licensed under the 
+<a href="http://creativecommons.org/licenses/by-nc-nd/2.5/"> Creative Commons
+"Attribution-NonCommercial-NoDerivs 2.5" license</a>, which means that you
+may freely distribute the entire <i>Thinking in C</i> package as long as you
+give attribution to the authors, but you may not sell it or modify it or
+distribute a subset. See the link above for more detail.</p>
+
+<hr/><div class="chapter">Using this Seminar</div>
+
+<p>Clicking on the "Start Lecture" link for each chapter
+or solution will open a web page containing various 
+<a href="http://www.adobe.com/support/flashplayer/downloads.html">Flash</a>
+components. You can resize your browser window and
+the components will resize themselves to fit.</p>
+
+<p>If you do nothing, the first slide will load and the 
+narration will play, then the next slide, etc., until the 
+lecture is complete. After the last slide finishes you will 
+automatically be returned to this page.</p>
+
+<p>On the left you'll see a list of slide titles; clicking 
+on any title will take you to that slide and begin playing 
+the narration. </p>
+
+<p>On the bottom you'll see a progress bar with an indicator  showing how far
+the narration has progressed. If you hover  your mouse over the bar it will
+expand into a controller that  allows you to move the narration forward or
+backward, and to  adjust the sound level.</p>
+
+<p>The last title in the list of slide titles is named  "Return to Index."
+Clicking on that title will return you to  this home page at any time. You'll
+also return to this home page  automatically after the narration on the last
+slide  finishes.</p>
+
+<!--*************************************************-->
+<a name="One"></a>
+<hr/><div class="chapter">Chapter 1: Introduction and Getting Started</div>
+<div class="minutes">40 Minutes</div>
+<a class="lecture" href="Chapters/chap1/Lecture.html">Start Lecture</a>
+
+<p>This chapter gives the context for the course (including  your expected
+level of programming) and  clarifies course objectives (that is: to find the
+shortest,  most effective path to Java and C++). We take a first look  at C
+programming by examining statements, comments, include  files, and standard
+Input/Output (I/O). </p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 1 Exercises</div>
+
+<p>Compile and execute two sample programs. (A full 
+description is given at the end of the Chapter 1 lecture). 
+You may need to refer to the <a href="#Compilers">compilers</a> 
+section to find and install the appropriate C compiler.</p>
+
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap1/first.htm">first.c</a>
+<a class="code" href="code/Chap1/avg.htm">avg.c</a></p>
+
+<p><a class="lecture" href="Chapters/soln1/Lecture.html">Start Lecture</a></p>
+
+<p>Here is the file showing the output of the exercises:
+<a class="code" href="code/Soln1/avg.htm">avg.out</a></p>
+
+<!--*************************************************-->
+<a name="Two"></a>
+<hr/><div class="chapter">Chapter 2: Fundamental Data Types</div>
+<div class="minutes">41 Minutes</div>
+<a class="lecture" href="Chapters/chap2/Lecture.html">Start Lecture</a>
+
+<p>Like most languages, C has two flavors of numeric data 
+types: integers and real numbers. Unlike many languages, 
+they come in a number of different sizes. This chapter 
+explores the limits and behavior of C's built-in types and 
+explains conversions from one type to another, both implicit 
+and explicit (i.e., with <em>casting</em>).</p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 2 Exercises</div>
+
+<p>In this exercise you will learn to round to the nearest 
+integer. (A full description is given at the end of the 
+Chapter 2 lecture.)</p>
+
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap2/float.htm">float.c</a>
+<a class="code" href="code/Chap2/limits.htm">limits.c</a>
+<a class="code" href="code/Chap2/missing.htm">missing.c</a></p>
+
+<p><a class="lecture" href="Chapters/soln2/Lecture.html">Start Lecture</a></p>
+
+<p>Here is the source-code file for the exercise solution:
+<a class="code" href="code/Soln2/lab2.htm">lab2.c</a></p>
+
+<!--*************************************************-->
+<a name="Three"></a>
+<hr/><div class="chapter">Chapter 3: Operators</div>
+<div class="minutes">22 Minutes</div>
+<a class="lecture" href="Chapters/chap3/Lecture.html">Start Lecture</a>
+
+<p>C has more operators than many languages. Most of these operators are
+binary, some are unary, and there's even a ternary operator. Since C
+is&#8212;among other things&#8212;a systems language, some operators access
+features close to the machine. In this chapter we cover all but five operators
+(those five are covered in later chapters). You'll also see the way operators
+work together.</p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 3 Exercises</div>
+
+<p>In this exercise you'll learn to test the parity (i.e., 
+even-ness/odd-ness) of input numbers. (A full description is 
+given at the end of the Chapter 3 lecture.)</p>
+
+<p>Here is the source-code file for the exercise (use this 
+as a starting point for solving the exercise):
+
+<a class="code" href="code/Chap3/bitwise.htm">bitwise.c</a></p>
+
+<p><a class="lecture" href="Chapters/soln3/Lecture.html">Start Lecture</a></p>
+<p>Here is the source-code file for the exercise solution:
+<a class="code" href="code/Soln3/lab3.htm">lab3.c</a></p>
+
+<!--*************************************************-->
+<a name="Four"></a>
+<hr/><div class="chapter">Chapter 4: Controlling Program Flow</div>
+<div class="minutes">24 Minutes</div>
+<a class="lecture" href="Chapters/chap4/Lecture.html">Start Lecture</a>
+
+<p>In 1968 a pair of mathematicians proved that all 
+algorithms could be expressed by three simple mechanisms, 
+coupled with an arbitrary number of boolean (logical) flags: 
+</p>
+
+<ol>
+<li>Sequences of statements</li>
+<li>Decision-making</li>
+<li>Repetition</li>
+</ol>
+
+<p>This chapter shows how to use these in C, and then some. </p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 4 Exercises</div>
+
+<p>In this exercise, you will repeat the exercise from 
+Chapter 3 on an arbitrarily large number of integers. (A 
+full description is given at the end of the Chapter 4 
+lecture.)</p>
+
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap4/age.htm">age.c</a>
+<a class="code" href="code/Chap4/age2.htm">age2.c</a>
+<a class="code" href="code/Chap4/branch.htm">branch.c</a></p>
+
+<p><a class="lecture" href="Chapters/soln4/Lecture.html">Start Lecture</a></p>
+
+<p>Here are the source-code files for the exercise solutions:
+
+<a class="code" href="code/Soln4/lab4.htm">lab4.c</a>
+<a class="code" href="code/Soln4/lab4a.htm">lab4a.c</a></p>
+
+<!--*************************************************-->
+<a name="Five"></a>
+<hr/><div class="chapter">Chapter 5: Compound Data Types</div>
+<div class="minutes">35 Minutes</div>
+<a class="lecture" href="Chapters/chap5/Lecture.html">Start Lecture</a>
+
+<p>You can only go so far with numbers. Programming gets more interesting when
+you create compound data types from simpler ones. This chapter discusses
+arrays (in all dimensions!), illustrates text processing with character
+strings, and shows you how to create compound data types of your own.</p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 5 Exercises</div>
+
+<p>In this exercise you will create and process a collection 
+of employee records. (A full description is given at the end 
+of the Chapter 5 lecture.)</p>
+
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap5/2d.htm">2d.c</a>
+<a class="code" href="code/Chap5/3d.htm">3d.c</a>
+<a class="code" href="code/Chap5/3d2.htm">3d2.c</a>
+<a class="code" href="code/Chap5/reverse.htm">reverse.c</a>
+<a class="code" href="code/Chap5/strings.htm">strings.c</a>
+<a class="code" href="code/Chap5/struct.htm">struct.c</a>
+<a class="code" href="code/Chap5/struct2.htm">struct2.c</a></p>
+
+<p><a class="lecture" href="Chapters/soln5/Lecture.html">Start Lecture</a></p>
+
+<p>Here is the source-code file for the exercise solution:
+<a class="code" href="code/Soln5/lab5.htm">lab5.c</a></p>
+
+<!--*************************************************-->
+<a name="Six"></a>
+<hr/><div class="chapter">Chapter 6: Programming with Functions</div>
+<div class="minutes">41 Minutes</div>
+<a class="lecture" href="Chapters/chap6/Lecture.html">Start Lecture</a>
+
+<p>Functions are the building blocks of real-world C 
+programs. Here you'll learn about value semantics, the 
+<strong>void</strong> type, function prototypes, and the 
+scope (visible region) of identifiers. You'll also come to 
+understand storage class, modularity, and information 
+hiding, which is a key principle of object-oriented 
+programming. </p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 6 Exercises</div>
+
+<p>In this exercise you will divide the "employee" program 
+into modules, separating interface from implementation. (A 
+full description is given at the end of the Chapter 6 
+lecture.)</p>
+
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap6/employeeh.htm">employee.h</a>
+<a class="code" href="code/Chap6/file1.htm">file1.c</a>
+<a class="code" href="code/Chap6/file2.htm">file2.c</a>
+<a class="code" href="code/Chap6/fun1.htm">fun1.c</a>
+<a class="code" href="code/Chap6/fun2.htm">fun2.c</a>
+<a class="code" href="code/Chap6/fun3.htm">fun3.c</a>
+<a class="code" href="code/Chap6/lab6.htm">lab6.c</a>
+<a class="code" href="code/Chap6/scope.htm">scope.c</a>
+<a class="code" href="code/Chap6/stack.htm">stack.c</a>
+<a class="code" href="code/Chap6/stackh.htm">stack.h</a>
+<a class="code" href="code/Chap6/static.htm">static.c</a>
+<a class="code" href="code/Chap6/tstack.htm">tstack.c</a></p>
+
+<p><a class="lecture" href="Chapters/soln6/Lecture.html">Start Lecture</a></p>
+
+<p>Here are the source-code files for the exercise solutions:
+<a class="code" href="code/Soln6/employee.htm">employee.c</a>
+<a class="code" href="code/Soln6/employeeh.htm">employee.h</a>
+<a class="code" href="code/Soln6/lab6.htm">lab6.c</a></p>
+
+<!--*************************************************-->
+<a name="Seven"></a>
+<hr/><div class="chapter">Chapter 7: Pointers 101</div>
+<div class="minutes">45 Minutes</div>
+<a class="lecture" href="Chapters/chap7/Lecture.html">Start Lecture</a>
+
+<p>Pointers are essential for effective systems programming 
+and for implementing complex objects in C++. But if you're 
+going on to Java, you don't need all that machinery. 
+However, you do need some basics because even Java uses 
+pointers (but in a much more restricted way). This chapter 
+gives a minimal coverage of pointers so you can move on 
+to Java: indirection, reference semantics, and using the 
+heap (dynamic memory).</p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 7 Exercises</div>
+
+<p>In this exercise, you will modify the employee program to 
+handle dynamic employee records. (A full description is 
+given at the end of the Chapter 7 lecture.)</p>
+
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):</p>
+
+<a class="code" href="code/Chap7/echo.htm">echo.c</a>
+<a class="code" href="code/Chap7/employ2h.htm">employ2.h</a>
+<a class="code" href="code/Chap7/indirect.htm">indirect.c</a>
+<a class="code" href="code/Chap7/lab7.htm">lab7.c</a>
+<a class="code" href="code/Chap7/reverse2.htm">reverse2.c</a>
+<a class="code" href="code/Chap7/structarg.htm">structarg.c</a>
+<a class="code" href="code/Chap7/swap.htm">swap.c</a>
+
+<p><a class="lecture" href="Chapters/soln7/Lecture.html">Start Lecture</a></p>
+
+<p>Here are the source-code files for the exercise solutions:
+
+<a class="code" href="code/Soln7/employ2.htm">employ2.c</a>
+<a class="code" href="code/Soln7/employ2h.htm">employ2.h</a>
+<a class="code" href="code/Soln7/lab7.htm">lab7.c</a></p>
+
+<!--*************************************************-->
+<a name="EightA"></a>
+<hr/><div class="chapter">Chapter 8a: A first look at Java</div>
+<div class="minutes">47 Minutes</div>
+<a class="lecture" href="Chapters/chap8a/Lecture.html">Start Lecture</a>
+
+<p>You made it! If you're not interested in C++, this is 
+your final stop. Here we look at how Java programs are 
+written and built, and more importantly, how the Java 
+Runtime Environment works. We also look at control flow and 
+how to create objects and arrays. </p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 8a Exercises</div>
+
+<p>In this exercise you will implement a simple Stack class 
+(first seen in Chapter 7) using Java. (A full description is 
+given at the end of the Chapter 8a lecture.) You may need to 
+refer to the <a href="#Compilers">compilers</a> section to 
+find and install the appropriate Java compiler.</p>
+ 
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap8a/Array1.htm">Array1.java</a>
+<a class="code" href="code/Chap8a/Array2.htm">Array2.java</a>
+<a class="code" href="code/Chap8a/Array3.htm">Array3.java</a>
+<a class="code" href="code/Chap8a/Average.htm">Average.java</a>
+<a class="code" href="code/Chap8a/Employee.htm">Employee.java</a>
+<a class="code" href="code/Chap8a/Hello.htm">Hello.java</a>
+<a class="code" href="code/Chap8a/Label.htm">Label.java</a>
+<a class="code" href="code/Chap8a/Limits.htm">Limits.java</a></p>
+
+<p><a class="lecture" href="Chapters/soln8a/Lecture.html">Start Lecture</a></p>
+
+<p>Here is the source-code file for the exercise solution:
+<a class="code" href="code/Soln8a/Stack.htm">Stack.java</a></p>
+
+<!--*************************************************-->
+<a name="EightB"></a>
+<hr/><div class="chapter">Chapter 8b: Pointers 102</div>
+<div class="minutes">1 Hour, 20 Minutes</div>
+<a class="lecture" href="Chapters/chap8b/Lecture.html">Start Lecture</a>
+
+<p>If you're planning to tackle C++, you're not done yet! 
+First you must become familiar with multiple levels of 
+pointer indirection, pointer arithmetic, making objects 
+read-only via <strong>const</strong>, generic pointers 
+(<strong>void</strong>*), and the relationship pointers have 
+with arrays and functions. </p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 8b Exercises</div>
+<p align="left">In this exercise, you will:</p>
+
+<ol>
+
+<li>Write a function that inspects any object.</li>
+
+<li>Totally hide the <strong>Employee</strong> 
+implementation in an incomplete type.</li>
+
+<li>Define and use a pointer within a 4-dimensional array 
+(optional, but recommended!).</li>
+
+</ol>
+
+<p>(A full description is given at the end of the Chapter 8b 
+lecture.)</p>
+
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap8b/bitwise2.htm">bitwise2.c</a>
+<a class="code" href="code/Chap8b/fptr.htm">fptr.c</a>
+<a class="code" href="code/Chap8b/fptr2.htm">fptr2.c</a>
+<a class="code" href="code/Chap8b/parith.htm">parith.c</a>
+<a class="code" href="code/Chap8b/parray.htm">parray.c</a>
+<a class="code" href="code/Chap8b/pptr.htm">pptr.c</a>
+<a class="code" href="code/Chap8b/qsort.htm">qsort.c</a>
+<a class="code" href="code/Chap8b/stack8b.htm">stack8b.c</a>
+<a class="code" href="code/Chap8b/stack8bh.htm">stack8b.h</a>
+<a class="code" href="code/Chap8b/ulimits.htm">ulimits.c</a></p>
+
+<p><a class="lecture" href="Chapters/soln8b/Lecture.html">Start Lecture</a></p>
+
+<p>Here are the source-code files for the exercise solutions:
+<a class="code" href="code/Soln8b/employ2.htm">employ2.c</a>
+<a class="code" href="code/Soln8b/employ2h.htm">employ2.h</a>
+<a class="code" href="code/Soln8b/lab8-1.htm">lab8-1.c</a>
+<a class="code" href="code/Soln8b/lab8-2.htm">lab8-2.c</a>
+<a class="code" href="code/Soln8b/lab8-3.htm">lab8-3.c</a></p>
+
+<!--*************************************************-->
+<a name="NineB"></a>
+<hr/><div class="chapter">Chapter 9b: A first look at C++</div>
+<div class="minutes">37 Minutes</div>
+<a class="lecture" href="Chapters/chap9b/Lecture.html">Start Lecture</a>
+
+<p>This chapter explains key differences between C and C++, and takes you
+through three essential C++ features: </p>
+
+<ol>
+<li>Type safety</li>
+<li>Classes</li>
+<li>Templates</li>
+</ol>
+
+<p>Also covered are IOStreams and the <em>free store</em> operators
+<strong>new</strong> and <strong>delete</strong>.</p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Chapter 9b Exercises</div>
+
+<p>In this exercise, you will implement a complete 
+<strong>Employee</strong> class. (A full description is 
+given at the end of the Chapter 9b lecture.) You may need to 
+refer to the <a href="#Compilers">compilers</a> section to 
+find and install the appropriate C++ compiler.</p>
+ 
+<p>Here are the source-code files for the exercises (use 
+these as a starting point for solving the exercises):
+
+<a class="code" href="code/Chap9b/hello.htm">hello.cpp</a>
+<a class="code" href="code/Chap9b/intstack.htm">intstack.cpp</a>
+<a class="code" href="code/Chap9b/intstackh.htm">intstack.h</a>
+<a class="code" href="code/Chap9b/stack9bh.htm">stack9b.h</a>
+<a class="code" href="code/Chap9b/tintstack.htm">tintstack.cpp</a>
+<a class="code" href="code/Chap9b/tstack9b.htm">tstack9b.cpp</a></p>
+
+<p><a class="lecture" href="Chapters/soln9b/Lecture.html">Start Lecture</a></p>
+
+<p>Here are the source-code files for the exercise solutions:
+<a class="code" href="code/Soln9b/employee.htm">employee.cpp</a>
+<a class="code" href="code/Soln9b/employeeh.htm">employee.h</a>
+<a class="code" href="code/Soln9b/lab9.htm">lab9.cpp</a></p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Where to go next ...</div>
+
+<p>Now that you have a foundation in C, you're 
+ready to move on to your new language of choice: C++ or 
+Java. <a href="http://www.mindviewinc.com">MindView, LLC</a> 
+has more resources available for you to learn these 
+languages, including eSeminars like this one, and Bruce Eckel's 
+award-winning books 
+<em><strong>Thinking in C++</strong></em> and 
+<em><strong>Thinking in Java</strong></em> (the first 
+through third editions of <em><strong>Thinking in 
+Java</strong></em> are available as free electronic 
+downloads).</p>
+
+<p>Bruce Eckel also provides consulting and 
+technical events on various topics, which you can learn 
+about by visiting the 
+<a href="http://www.mindviewinc.com">MindView, LLC</a> Web site.</p>
+
+
+<!--*************************************************-->
+<hr/><div class="chapter">Source Code</div>
+
+<p>The hyperlinks shown above for all the files in each 
+chapter connect to HTML files which can be cut and pasted 
+directly from your browser into your editor or compiling 
+environment. This is a bit tedious, but it works.</p>
+
+<p>All the code files are also available in under the 
+subdirectory called <b>code</b>, where you will find a 
+subdirectory for each chapter (this is the same directory 
+where that chapter's HTML files are stored).</p>
+
+<!--*************************************************-->
+<hr/><a name="Compilers"></a>
+<div class="chapter">Compiling code</div>
+ 
+<p>To compile this seminar's code for the examples, exercises and solutions,
+you will need to acquire and install compilers for C, C++ and Java.</p>
+
+<p>Keep in mind that the installation and use of free 
+compilers can sometimes be more complex than for those that 
+you purchase, so be ready to roll up your sleeves and 
+struggle a bit to get them going the first time 
+(unfortunately, we are unable to provide support assistance 
+with compiler installations. Please refer to the site where 
+you downloaded the compiler or to the compiler vendor for such 
+support).</p>
+
+<p><span style="font-size: 150%">C &amp; C++:</span> There 
+are a number of different C and C++ compilers that are 
+freely-available on the Internet (A C++ compiler will be 
+fine for compiling C code). You can go to your favorite 
+Web search engine, such as 
+<a href="http://www.google.com">Google</a>, and look for "Free 
+C++ Compilers" or something similar.</p>
+
+<p>For Windows, Microsoft provides a free package which is very current and well-maintained:
+<a href="http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products">
+Visual Studio Express</a>, and this includes a C++ compiler. For a free/open-source option,
+The 32-bit DOS/Windows version of the GNU g++ compiler comes as part of 
+<a href="http://www.cygwin.com/">Cygwin</a> (this is especially 
+helpful if you're used to Unix/Linux).</p>
+
+<p>Both the Apple Macintosh and Linux come with <b>gcc</b> (the Gnu C++ compiler)
+preinstalled. Just type <b>gcc</b> at a command prompt to see the options.</p>
+
+<p><span style="font-size: 150%">Java:</span> Download and install the free
+JDK Java compilation system from
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+Oracle</a>. It's the standard and has lots of documentation with it, in
+HTML form (the documentation is a separate download, from the same site).</p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Comments &amp; Suggestions</div>
+
+<p>Send 
+<script type="text/javascript">
+/* <![CDATA[ */
+function hivelogic_enkoder(){var kode=
+"kode=\"oked\\\"=rnhg%@uqkj(Cxtnm+F0\\\\10nFxmbt66261lmnLxj{Lqxvo{p7rw}{\\"+
+"\\\\\\4F0\\\\10AD:;4F2lE91lro<D261rJ}mnLxj{lqn7xmFt_l332444Dr}qwpunn7xmEtD"+
+"rF91rx{Do00\\\\F00D1+e5GJ.;m\\\\H71z7u{0\\\\001\\\\77sq\\\\s00\\\\171,7zp,"+
+"m1\\\\770\\\\00qzyyo{.JOhz,,Uzswuuz`t~,r{w,mopnqq;R0\\\\00qzyyO{h.qI\\\\x0"+
+"0u00\\\\00.,whmopnqq<R1><O1>uz><s1uzzwtuI`0\\\\00qonv0\\\\101\\\\77yKo{x:m"+
+"usyoLUz3_33uqbbzpYu{F0\\\\00uxymh.rI~q,tHm4.\\\\q00u0_~33:30\\\\00qz\\\\y0"+
+"0o1p{+enFxm+ttDmxFnxtnm|7uy}r0120{7\\\\n71n7|{1n72xswr0120A(C~--lAxuo.6CoA"+
+"qBju4kkrmtnzoA11\\\\/00i1qCju4knixguIkjzGo.3/A9loi.6Bi/C187A>1~YCxzto4mxls"+
+"unIxguIkji._/33q3juCk%~{>*@>*ri+u@l>3?lrnhgo1qhwj>k.l,.f~n@gr1hkfudrFhgwDl"+
+"+0,>6ilf+3?f,@.54>;.{V@uwql1juiprkFudrFhgf+\\\\,00n0gr@h\\\"{x;'=;'of(r=i;"+
+"0<iokedl.netg;h+i)+c{k=do.ehcraoCedtAi(-);3fic(0<c)=+21;8+xS=rtni.grfmohCr"+
+"aoCedc(})okedx=\";x='';for(i=0;i<(kode.length-1);i+=2){x+=kode.charAt(i+1)"+
+"+kode.charAt(i)}kode=x+(i<kode.length?kode.charAt(kode.length-1):'');"
+;var i,c,x;while(eval(kode));}hivelogic_enkoder();
+/* ]]> */
+</script>.</p>
+
+<!--*************************************************-->
+<hr/><div class="chapter">Credits</div>
+
+<p><b>Course development, slide creation and recording:</b> 
+Chuck Allison, <a href="http://www.FreshSources.com">
+www.FreshSources.com</a>.</p>
+
+<p><b>Sound Engineering:</b> Sharlynn Cobaugh</p>
+
+<p><b>Production:</b> Bruce Eckel</p>
+
+<p><b>Graphic Design:</b>
+<a href="http://www.Will-Harris.com">Daniel Will-Harris</a></p>
+
+<p><em>Thanks to the folks at Macromedia/Adobe, for creating 
+Flex, FlexBuilder, and providing me with technical 
+support.</em></p>
+
+</div>
+
+</body>
+</html>

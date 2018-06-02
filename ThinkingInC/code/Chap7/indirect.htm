@@ -1,0 +1,14 @@
+<html><font size="+1"><pre>
+/* indirect.c: Illustrate indirection */
+#include &lt;stdio.h&gt;
+
+int main() {
+    int  i = 7;
+    int* ip = &i; 
+
+    printf("Address %p contains %d\n",ip, *ip);
+    *ip = 8;
+    printf("Now address %p contains %d\n",ip, *ip);
+    return 0;
+}
+</pre></font></html>

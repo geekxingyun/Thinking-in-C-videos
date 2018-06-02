@@ -1,0 +1,73 @@
+<html><font size="+1"><pre>
+/* employ2.c */
+#include "employ2.h"
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+struct Employee {
+    char last[16];
+    char first[11];
+    char title[16];
+    int salary;
+};
+
+Employee* createEmployee(char* last, char* first, char* title, int salary) {
+    Employee* p = malloc(sizeof(Employee));
+    if (p != NULL) {
+        strcpy(p-&gt;last, last);
+        strcpy(p-&gt;first, first);
+        strcpy(p-&gt;title, title);
+        p-&gt;salary = salary;
+    }
+    return p;
+}
+
+char* getLast(Employee* p) {
+    return p ? p-&gt;last : "";
+}
+
+char* getFirst(Employee* p) {
+    return p ? p-&gt;first : "";
+}
+
+char* getTitle(Employee* p) {
+    return p ? p-&gt;title : "";
+}
+
+int getSalary(Employee* p) {
+    return p ? p-&gt;salary : 0;
+}
+
+void setLast(Employee* p, char* last) {
+    if (p != NULL)
+        strcpy(p-&gt;last, last);
+}
+
+void setFirst(Employee* p, char* first) {
+    if (p != NULL)
+        strcpy(p-&gt;first, first);
+}
+
+void setTitle(Employee* p, char* title) {
+    if (p != NULL)
+        strcpy(p-&gt;title, title);
+}
+
+void setSalary(Employee* p, int salary) {
+    if (p != NULL)
+        p-&gt;salary = salary;
+}
+
+void printEmployee(Employee* p) {
+    putchar('{');
+    if (p != NULL) {
+        printf("%s,%s,%s,%d",
+               p-&gt;last,
+               p-&gt;first,
+               p-&gt;title,
+               p-&gt;salary);
+    }
+    putchar('}');
+}
+</pre></font></html>
